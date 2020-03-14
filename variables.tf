@@ -1,20 +1,20 @@
 variable "vpc_name" {
-  type = string
+  type    = string
   default = "Sandbox Environment"
 }
 
 variable "tf_version" {
-  type = string
+  type    = string
   default = "v0.12.21"
 }
 
 variable "owner" {
-  type = string
+  type    = string
   default = "Kevin Epstein"
 }
 
 variable "environment" {
-  type = string
+  type    = string
   default = "developmemnt"
 }
 
@@ -24,27 +24,27 @@ variable "deploy_region" {
 }
 
 variable "vpc_cidr" {
-  type = string
+  type    = string
   default = "10.0.0.0/16"
 }
 
 variable "dns_hostnames" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "dns_support" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "nat_gateway" {
-  type = bool
+  type    = bool
   default = false
 }
 
 variable "vpn_gateway" {
-  type = bool
+  type    = bool
   default = false
 }
 
