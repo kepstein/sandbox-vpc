@@ -15,6 +15,13 @@ jobs:
           tf_actions_subcommand: 'fmt'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Terraform Lint'
+        uses: reviewdog/action-tflint@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          working_directory: "." # Change working directory
+          # reporter: github-pr-review # Change reporter
+          # flags: "--deep" # Add custom flags
       - name: 'Terraform Init'
         uses: hashicorp/terraform-github-actions@master
         with:
